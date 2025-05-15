@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Klass | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-[#18181b]">
+    <div class="max-w-3xl mx-auto px-4 py-12">
+        <!-- Header Row -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-10 gap-6">
+            <div>
+                <h1 class="text-5xl font-extrabold tracking-tight mb-2 flex items-center gap-2">
+                    Hi, I'm Dylan <span class="text-4xl">👋</span>
+                </h1>
+                <p class="text-xl text-[#52525b]">Computer Science & Statistics student at Penn State. I love building things and helping people.</p>
+            </div>
+            <!-- Ensure 'dylan_headshot.jpg' exists in the img folder and matches this filename exactly (case-sensitive) -->
+            <img src="img/dylan_headshot.jpg" alt="Dylan Klass Headshot" class="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg" />
+        </div>
+
+        <!-- About -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-2">About</h2>
+            <p class="text-[#52525b] text-lg">
+                I'm currently a Computer Science & Statistics student at Penn State University (Class of May 2026), but my real passion lives outside the classroom. I thrive at the intersection of software, startups, and solving real problems with technology.
+            </p>
+            <p class="text-[#52525b] text-lg mt-4">
+                I've co-founded TasteMate LLC and Reactivity Insights LLC, focusing on AI-powered food personalization and transforming nutrition research. I've interned as a Software Engineer at LiteraSeed Inc. and Electro-Mechanical Integrators Inc., and currently supervise Tech Tutors at Penn State. I'm passionate about building innovative solutions that make a real impact.
+            </p>
+        </section>
+
+        <!-- Experiences & Projects -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-6">Experiences & Projects</h2>
+            <div class="flex flex-col gap-8">
+                <!-- LiteraSeed Inc. -->
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 border shadow flex items-center justify-center text-blue-600 text-xs font-semibold p-1 text-center">LS</div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center cursor-pointer" onclick="toggleWork('literaSeedDetails', 'literaSeedChevron')">
+                                <span class="font-bold text-lg">LiteraSeed Inc.</span>
+                                <span id="literaSeedChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-[#a1a1aa] text-base">May 2025 – Aug 2025</span>
+                            </div>
+                        </div>
+                        <div class="text-[#52525b] text-base -mt-1">Software Engineering Intern</div>
+                        <div id="literaSeedDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Engineered a greenfield Next.js application through a secure SMART on FHIR launch with OAuth2 to automate patient provisioning in Firestore and support clinical workflows, including report management and SMS invitations to questionnaire via Twilio</li>
+                                <li>Spearheaded the technical design for a novel AI clinical decision support feature, crafting a microservices-based system to analyze longitudinal data from 60,000+ de-identified patients via a Dockerized HAPI-FHIR server and simulated LLM insights</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- TasteMate LLC -->
+                <div class="flex items-start gap-4">
+                    <img src="img/tastemate.png" alt="TasteMate LLC" class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center cursor-pointer" onclick="toggleWork('tasteMateDetails', 'tasteMateChevron')">
+                                <span class="font-bold text-lg">TasteMate LLC</span>
+                                <span id="tasteMateChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <a href="https://tastemate.pro/" target="_blank" class="text-sm text-blue-600 hover:underline">Website</a>
+                                <a href="https://apps.apple.com/us/app/tastemate-ai-wellness-recipes/id6479318665" target="_blank" class="text-sm text-blue-600 hover:underline">App</a>
+                                <a href="https://www.youtube.com/watch?v=fN5lAARU0Fc" target="_blank" class="text-sm text-blue-600 hover:underline">Demo</a>
+                                <span class="text-[#a1a1aa] text-base">Jan 2024 – Dec 2024</span>
+                            </div>
+                        </div>
+                        <div class="text-[#52525b] text-base -mt-1">Co-Founder & Software Engineer</div>
+                        <div id="tasteMateDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Launched an AI-powered recipe app using Flutter and Django, integrating custom LangChain agents to increase recipe variation by 20% and doubling user session time through an iterative, feedback-driven design process</li>
+                                <li>Secured $4,800 in non-dilutive funding by leading the team to win NittanyAI pitch competition and NES x CIES pitch competition, and cut initial development time by 30% through the implementation of agile methodologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reactivity Insights LLC -->
+                <div class="flex items-start gap-4">
+                    <img src="img/reactivity_insights.png" alt="Reactivity Insights LLC" class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center cursor-pointer" onclick="toggleWork('reactivityDetails', 'reactivityChevron')">
+                                <span class="font-bold text-lg">Reactivity Insights LLC</span>
+                                <span id="reactivityChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <a href="https://www.youtube.com/watch?v=LZHbQ1tWSYA" target="_blank" class="text-sm text-blue-600 hover:underline">Demo</a>
+                                <span class="text-[#a1a1aa] text-base">Oct 2024 – Jul 2025</span>
+                            </div>
+                        </div>
+                        <div class="text-[#52525b] text-base -mt-1">Co-Founder & Software Engineer</div>
+                        <div id="reactivityDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Devised a personalized intervention system grounded in Dr. Masterson's food cue reactivity research, utilizing an e-greedy algorithm to solve the multi-armed bandit problem and reduce the time to identify optimal user guidance by 35%</li>
+                                <li>Developed a dual-platform solution after conducting discovery calls with 50+ nutritionists, translating academic research into a consumer-facing React Native app and a Next.js coaching dashboard connected by RESTful APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Electro-Mechanical Integrators Inc. -->
+                <div class="flex items-start gap-4">
+                     <img src="img/emi.png" alt="Electro-Mechanical Integrators Inc." class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleWork('emiDetails', 'emiChevron')">
+                            <div>
+                                <span class="font-bold text-lg">Electro-Mechanical Integrators Inc.</span>
+                                <span id="emiChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                                <div class="text-[#52525b] text-base -mt-1">Software Engineer Intern</div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <a href="https://emiworks.com/" target="_blank" class="text-sm text-blue-600 hover:underline">Website</a>
+                                <span class="text-[#a1a1aa] text-base">May 2024 – Aug 2024</span>
+                            </div>
+                        </div>
+                        <div id="emiDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Improved EMI's custom software by addressing 25+ user-reported bugs and implementing fixes in PieceMaker, using Visual Basic and the .NET framework, ensuring smooth and reliable G-Code automation for machine operations.</li>
+                                <li>Engineered an AI-powered customer support assistant using Flask and RAG algorithms, enhancing user experience by automating responses to technical issues, while also creating comprehensive documentation for easier onboarding.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Tech Tutors Penn State ITLD -->
+                <div class="flex items-start gap-4">
+                    <img src="img/pennstate.png" alt="Penn State" class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center cursor-pointer" onclick="toggleWork('techTutorDetails', 'techTutorChevron')">
+                                <span class="font-bold text-lg">Tech Tutors Penn State ITLD</span>
+                                <span id="techTutorChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <a href="https://itld.psu.edu/tech-tutors/" target="_blank" class="text-sm text-blue-600 hover:underline">Website</a>
+                                <span class="text-[#a1a1aa] text-base">Aug 2023 – Present</span>
+                            </div>
+                        </div>
+                        <div class="text-[#52525b] text-base -mt-1">Supervisor & Tutor</div>
+                        <div id="techTutorDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                           <ul class="list-disc pl-5 space-y-1">
+                                <li>Managed a team of 10+ Penn State employees, overseeing technology support operations and coordinating consultations to ensure smooth, personalized assistance for students, staff, and faculty across various Penn State-approved platforms.</li>
+                                <li>Conducted 100+ one-on-one consultations, offering personalized tech support for Penn State-approved platforms like Microsoft Office, Adobe, Zoom, and Canvas, enabling students, faculty, and staff to effectively learn desired technology skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Hanover Web Designs -->
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-full bg-green-100 border shadow flex items-center justify-center text-green-600 text-xs font-semibold p-1 text-center">NHW</div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleWork('nhwdDetails', 'nhwdChevron')">
+                            <div>
+                                <span class="font-bold text-lg">New Hanover Web Designs</span>
+                                <span id="nhwdChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                        </div>
+                        <div id="nhwdDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Automated the generation of over 200 business leads per hour by creating a robust data pipeline with Python, using Selenium for browser automation and BeautifulSoup for parsing and extracting business data into a structured CSV</li>
+                                <li>Streamlined the sales process by automatically disqualifying over 82% of initial prospects, using a custom engine that integrates the Google PageSpeed API to analyze site performance and apply business-logic heuristics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quantitative Analysis Bot -->
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-full bg-purple-100 border shadow flex items-center justify-center text-purple-600 text-xs font-semibold p-1 text-center">QAB</div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleWork('qabDetails', 'qabChevron')">
+                            <div>
+                                <span class="font-bold text-lg">Quantitative Analysis Bot</span>
+                                <span id="qabChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                        </div>
+                        <div id="qabDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Orchestrated a data pipeline to process and reconcile over 27,000 event contracts from two disparate, real-time data feeds, utilizing a sentence-transformer AI model to identify semantically equivalent markets with ≥96% accuracy</li>
+                                <li>Accelerated the pricing analysis runtime by 13.8x (from 84s to 6s) by re-architecting the system to use multi-threading and parallel API calls, enabling the near real-time detection of market inefficiencies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- MDADM Linear Device -->
+                <div class="flex items-start gap-4">
+                    <!-- Placeholder Logo for MDADM -->
+                    <div class="w-14 h-14 rounded-full bg-gray-200 border shadow flex items-center justify-center text-gray-500 text-xs font-semibold p-1 text-center">MLD</div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center cursor-pointer" onclick="toggleWork('mdadmDetails', 'mdadmChevron')">
+                            <div>
+                                <span class="font-bold text-lg">MDADM Linear Device</span>
+                                <span id="mdadmChevron" class="inline-block align-middle ml-1 text-lg transform transition-transform">⌄</span>
+                            </div>
+                            <!-- No date for this project entry -->
+                        </div>
+                        <div id="mdadmDetails" class="mt-2 text-lg overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Constructed a 16-disk JBOD (Just a Bunch Of Disks) system from scratch in a Linux environment using C, enabling efficient, distributed read and write operations across multiple physical disks for systems programming course</li>
+                                <li>Achieved an 86% cache hit rate by designing and implementing an optimized caching layer with a custom replacement policy, drastically accelerating data retrieval speeds over TCP socket connections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-6">Education</h2>
+            <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <img src="img/pennstate.png" alt="Penn State" class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-lg">The Pennsylvania State University</span>
+                                <div class="text-[#52525b] text-base -mt-1">B.S. in Computer Science, Minor in Statistics</div>
+                                <div class="text-[#52525b] text-sm">College of Engineering & Eberly College of Science</div>
+                            </div>
+                            <span class="text-[#a1a1aa] text-base">2023 – May 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="img/boyertown.png" alt="Boyertown Area Senior High School" class="w-14 h-14 rounded-full bg-white border shadow object-cover" />
+                     <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-lg">Boyertown Area Senior High School</span>
+                                <div class="text-[#52525b] text-base -mt-1">High School Diploma</div>
+                                <div class="text-[#52525b] text-sm">Salutatorian (2/500), Class President, TSA National Finalist</div>
+                            </div>
+                            <span class="text-[#a1a1aa] text-base">2019 – 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-2">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">C</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Java</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Python</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">JavaScript</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">TypeScript</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">React.js</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Next.js</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">React Native</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Flutter</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Django</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">SMART on FHIR</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Tailwind</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Redux</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Vite</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Git</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Firebase</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Firestore</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">VS Code</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Docker</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Figma</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Bash</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Linux</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">TCP</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">OOP</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Data Structures</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Algorithms</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Database Management</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">Data Science</span>
+                <span class="bg-black text-white rounded px-3 py-1 text-sm font-medium">UI/UX Design</span>
+            </div>
+        </section>
+        
+        <!-- Honors & Interests -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-2">Honors & Interests</h2>
+            <p class="text-[#52525b] text-lg"><span class="font-semibold">Honors:</span> Nittany AI Challenge Winner (2024), NES & CIES Pitch Competition Winner (2024), MVP DevLab Candidate (2024), Idea TestLab Candidate (2024), Global Impact Forum Penn State Nominee (2024), National Merit Scholar (2023), Salutatorian (2023).</p>
+            <p class="text-[#52525b] text-lg mt-2"><span class="font-semibold">Interests:</span> Cheesesteaks, Fingerstyle Guitar, Harry Potter, Hozier, Mount Tammany, Philadelphia Sports, Video Game OSTs.</p>
+        </section>
+
+        <!-- Contact -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-2">Contact</h2>
+            <div class="flex gap-4">
+                <a href="mailto:klassdylan@gmail.com" class="text-[#0070f3] hover:underline font-medium">Email</a>
+                <a href="https://www.linkedin.com/in/dylan-klass/" target="_blank" class="text-[#0070f3] hover:underline font-medium">LinkedIn</a>
+            </div>
+        </section>
+
+        <footer class="text-center text-[#a1a1aa] mt-12">
+            Made by Dylan Klass
+        </footer>
+    </div>
+
+    <script>
+        function toggleWork(detailsId, chevronId) {
+            const details = document.getElementById(detailsId);
+            const chevron = document.getElementById(chevronId);
+            if (details.style.maxHeight && details.style.maxHeight !== '0px') {
+                details.style.maxHeight = '0px';
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                details.style.maxHeight = details.scrollHeight + 'px';
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html> 
